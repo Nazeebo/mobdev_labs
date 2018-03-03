@@ -32,7 +32,6 @@ namespace lab3
             cancel.Click += delegate
             {
                 Intermediate.fileName = null;
-                StartActivity(typeof(MainActivity));
                 Finish();
             };
 
@@ -51,7 +50,6 @@ namespace lab3
                 string newFileName = Path.Combine(Path.GetDirectoryName(Intermediate.fileName), input);
                 File.Move(Intermediate.fileName, newFileName);
                 Intermediate.fileName = null;
-                StartActivity(typeof(MainActivity));
                 Finish();
             }
         }

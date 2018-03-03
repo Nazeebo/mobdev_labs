@@ -31,7 +31,6 @@ namespace lab3
             cancel.Click += delegate
             {
                 Intermediate.fileName = null;
-                StartActivity(typeof(MainActivity));
                 Finish();
             };
         }
@@ -47,9 +46,8 @@ namespace lab3
             {
                 string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
                 string newFileName = Path.Combine(path, input);
-                File.WriteAllText(newFileName, "file");
+                File.WriteAllText(newFileName, "");
                 Intermediate.fileName = null;
-                StartActivity(typeof(MainActivity));
                 Finish();
             }
         }
